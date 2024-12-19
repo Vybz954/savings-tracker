@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",  // ESNext for modern JavaScript features
+    "useDefineForClassFields": true,
+    "module": "ESNext",  // Using ES modules
+    "lib": ["ESNext"],   // Adding the most recent library support
+    "skipLibCheck": true,  // Skipping lib checks for dependencies
+    "moduleResolution": "node",  // Ensures proper module resolution
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true, // Allow importing JSON modules
+    "isolatedModules": true,
+    "noEmit": true,  // We're not emitting files, just using for type checking
+    "strict": true,  // Enable all strict type checks
+    "noImplicitAny": true,  // No `any` types allowed
+    "noUnusedLocals": true,  // Warn about unused locals
+    "noUnusedParameters": true,  // Warn about unused parameters
+    "noFallthroughCasesInSwitch": true,  // Avoid fallthrough in switch statements
+    "types": ["vitest", "node"]  // Add Vitest and Node types here for better support
+  },
+  "include": [
+    "node_modules/@hirosystems/clarinet-sdk/vitest-helpers/src",  // Keep Clarinet helpers
+    "tests",  // Your test files
+    "contracts/**/*.clar"  // Add your smart contract directory
+  ]
+}
